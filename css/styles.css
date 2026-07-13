@@ -152,9 +152,7 @@ a {
     padding-bottom: 5px;
 }
 
-/* =========================================
-   5. FORMULARIO DE RESERVAS
-   ========================================= */
+/*. FORMULARIO DE RESERVAS*/
 .seccion-reserva {
     max-width: 600px; /* Hace que el formulario no sea tan ancho */
     margin: 40px auto;
