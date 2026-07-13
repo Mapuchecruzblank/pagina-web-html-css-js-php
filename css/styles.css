@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box; /* Evita que el padding rompa los anchos */
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Quita el color azul/morado por defecto de todos los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.encabezado {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave abajo */
+}
+
+.navegacion {
+    width: min(1120px, calc(100% - 32px));
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Separa el logo del menú */
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #123c33;
+}
+
+.menu-navegacion {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.menu-navegacion a {
+    padding: 10px 15px;
+    color: #123c33;
+    transition: color 0.3s ease;
+}
+
+.menu-navegacion a:hover {
+    color: #a84f36; /* Cambia de color al pasar el mouse */
+}
+
+.portada {
+    display: grid;
+    align-items: center;
+    padding: 72px 0 88px;
+    background:
+        linear-gradient(90deg, rgba(18, 60, 51, 0.94), rgba(18, 60, 51, 0.8) 42%, rgba(18, 60, 51, 0.18)),
+        linear-gradient(135deg, rgba(168, 79, 54, 0.78), rgba(201, 147, 61, 0.48)),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.07) 0 2px, transparent 2px 18px);
+    color: #fffaf2;
+}
+
+.contenido-portada {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.acciones-portada {
+    display: flex;
+    gap: 16px; 
+    margin-top: 32px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+    border-radius: 8px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton.principal {
+    background-color: #ffffff; 
+    color: #123c33; 
+    border: 2px solid #ffffff;
+}
+
+.boton.secundario {
+    background-color: transparent;
+    color: #ffffff; 
+    border: 2px solid #ffffff;
+}
+
+/*. SECCIÓN DE MENÚS (Tarjetas)
+    */
+.seccion {
+    width: min(1120px, calc(100% - 32px));
+    margin: 60px auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Usamos Grid para poner las tarjetas lado a lado */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adaptan solas */
+    gap: 24px;
+}
+
+.tarjeta-menu {
+    background: rgba(19, 113, 79, 0.9);
+    color: white;
+    padding: 26px;
+    border-radius: 16px; /* 50px era mucho, 16px se ve más elegante */
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta-menu h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #a84f36;
+    padding-bottom: 10px;
+}
+
+/* Ordenar las listas de los platos y precios */
+.tarjeta-menu ul {
+    list-style: none; /* Quita los puntos viñeta */
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta-menu li {
+    display: flex;
+    justify-content: space-between; /* Tira el nombre a la izq y el precio a la der */
+    margin-bottom: 12px;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
+
+/* =========================================
+   5. FORMULARIO DE RESERVAS
+   ========================================= */
+.seccion-reserva {
+    max-width: 600px; /* Hace que el formulario no sea tan ancho */
+    margin: 40px auto;
+    background: #f4f7f6;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre cada campo */
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-campo label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #123c33;
+}
+
+/* Darle estilo moderno a las cajas de texto */
+.grupo-campo input, 
+.grupo-campo select, 
+.grupo-campo textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.campo-completo {
+    margin-top: 10px;
+}
+
+/* 
+ PIE DE PÁGINA (Footer)*/
+.pie-pagina {
+    background-color: #123c33;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around; /* Reparte la info en columnas */
+    flex-wrap: wrap; /* Si la pantalla es chica, se bajan */
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+
+/*. PANTALLA DE LOGIN (Administrador)
+   */
+.pantalla-ingreso {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caja-ingreso {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.caja-ingreso h2 {
+    color: #123c33;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.caja-ingreso p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.campo-ingreso {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.boton-bloque {
+    width: 100%;
+}
+
+.enlace-volver {
+    display: block;
+    margin-top: 20px;
+    color: #123c33;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/*PANEL DE ADMINISTRACIÓN Y EDICIÓN*/
+.contenedor-admin {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cabecera-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #123c33;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.cabecera-admin h2 {
+    color: #123c33;
+    margin: 0;
+}
+
+.boton-salir {
+    background-color: #c62828;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.boton-salir:hover {
+    background-color: #b71c1c;
+}
+
+/* Diseño de la tabla del CRUD */
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-reservas thead {
+    background-color: #123c33;
+    color: #ffffff;
+}
+
+.tabla-reservas th, .tabla-reservas td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tabla-reservas tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Enlaces de modificar y eliminar */
+.enlace-accion {
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.enlace-modificar {
+    color: #0277bd; /* Azul */
+}
+
+.enlace-eliminar {
+    color: #c62828; /* Rojo */
+}
+
+.enlace-accion:hover {
+    text-decoration: underline;
+}
+
+/* Formulario de Modificar Reserva */
+.contenedor-formulario-editar {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contenedor-formulario-editar h2 {
+    color: #123c33;
+    margin-top: 0;
+    text-align: center;
+}
