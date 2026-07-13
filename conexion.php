@@ -4,7 +4,7 @@ $usuario = "root";
 $clave = "";
 $baseDatos = "labuenamesa_db";
 
-// Aquí está la clave: declaramos la variable exactamente como la pide el panel
+// declaramos la variable exactamente como la pide el panel
 $conexionBd = mysqli_connect($servidor, $usuario, $clave, $baseDatos);
 
 if (!$conexionBd) {
